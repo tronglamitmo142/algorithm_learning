@@ -1,22 +1,27 @@
 # Khoảng không đổi: Các phần tử trong mảng hơn kém nhau nhiều nhất là 1 đơn vị 
+# Codeforce 602B 
 
-from itertools import count
+def const_list(n, list_n):
+    i = 0 
+    j = 1 
+    count = 0 
+    max_list = 0 
+    while j < n:
+        distance = max(list_n[i:j+1]) - min(list_n[i:j+1])
+        if distance <= 1: 
+            j += 1 
+        else: 
+            i += 1 
 
-
-def const_list(list_n):
-    count_death = 0 
-    i = len(list_n) - 1
-    while i > 0:
-        i = i - list_n[i]
-        count_death += list_n[i]
-        print(count_death)
     
-    
-     
+    print(i, j, list_n[i:j+1])
+    return len(list_n[i:j+1])
         
 
-    return const_list
 
 N = input()
 list_n = list(map(int, input().split()))
-const_list(list_n)
+print(const_list(5, list_n))
+
+# N = [1,2,3,3,2]
+# print(max(N[1:3]))
