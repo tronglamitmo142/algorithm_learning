@@ -9,12 +9,13 @@ def main(T, list_n):
         subarray_sum += i 
         subarray_end += 1 
         while subarray_sum > T:
-            subarray_sum -= list_n[subarray_start]
+            subarray_sum -= list_n[subarray_start] 
             subarray_start += 1 
         if subarray_sum <= T:
             max_len = max(max_len, subarray_end - subarray_start)
     
     return max_len
+    
 
 
 
