@@ -1,19 +1,18 @@
-def main(N, left, right):
-    min_left = min(left)
-    max_right = max(right)
-    for i in range(N):
-        if left[i] == min_left and right[i] == max_right:
-            return i+1 
-    return -1 
+# Tim K phan tu nho nhat cua A 
+# M phan tu lon nhat cua B 
+# so sanh K max va M min
 
-N = int(input())
-left = [0]*N
-right =[0]*N
-for i in range(N):
-    left[i], right[i] = map(int, input().split())
-print(main(N, left, right))
-        
+def main(A, B, k, m):
+    max_A = A[k-1]
+    min_B = B[len(B) - m]
+    if max_A > min_B:
+        return "NO"
+    return "YES"
 
+size = input()
+k, m = list(map(int,input().split()))
+A = list(map(int,input().split()))
+B = list(map(int,input().split()))
 
+print(main(A, B, k, m))
 
-# [A, B]
