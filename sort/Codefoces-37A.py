@@ -16,3 +16,4 @@ n = int(input())
 list_n = list(map(int, input().split()))
 max_tower, number_tower = main(list_n)
 print(max_tower, number_tower)
+

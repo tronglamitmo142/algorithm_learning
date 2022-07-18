@@ -9,7 +9,7 @@ def main(k, n):
         if sum < k and i == len(n) -1: 
             return -1 
     return count
-    
+
 
 
 k = int(input())
