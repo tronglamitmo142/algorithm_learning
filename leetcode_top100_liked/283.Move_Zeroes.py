@@ -1,10 +1,5 @@
 # https://leetcode.com/problems/move-zeroes/
 
-
-
-
-
-
 def main(nums):
     slow = 0  
     for fast in range(len(nums)):
