@@ -1,28 +1,18 @@
 def main(x, y, points):
-    res = []
-    for point in point:
-        if point[0] == x or point[1] == y:
-            res.append[point]
-    if len(res) == 0:
+    d_min = 100000
+    for i in range(len(points)):
+        if points[i][0] == x and points[i][1] == y:
+            return i 
+        elif points[i][0] == x or points[i][1] == y:
+            d = abs(x-points[i][0]) + abs(y-points[i][1])
+            if d < d_min:
+                d_min = d
+                res = i 
+    if d_min == 100000:
         return -1 
-    else:
-        distance_min = abs(res[0][0] - x) + abs[res[0][1] - y]
-        for point in res:
-            distance_cur = abs(point[0] - x) + abs([point[1] -y])
-            distance_min = min(distance_min, distance_cur)
-        if distance_min == 0:
-            return 0 
-        else: 
-            
-
-
-        
-
-
-
-
-
+    return res 
 
 x = int(input())
 y = int(input())
 points =  list(list(map(int, input().split())))
+print(main(x,y, points))
