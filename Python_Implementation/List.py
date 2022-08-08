@@ -13,3 +13,4 @@ print(list1[0])
 # Delete element by index
 del list1[0]
 print(list1)
+
