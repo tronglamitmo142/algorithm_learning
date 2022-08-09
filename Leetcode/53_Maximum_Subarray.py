@@ -4,16 +4,16 @@
 # [4, -1, 2, 1] => Sum =6 
 # Use Kanade's Algorithm 
 # [-1]
-def main(nums):
-    sum_now = 0 
-    max_sum = 0 
-    for num in nums: 
-        sum_now += num
-        if sum_now < 0:
-            sum_now = 0  
-        if sum_now > max_sum:
-            max_sum = sum_now
-    return max_sum
+class Solution:
+    def maxSubArray(self, nums: list[int]) -> int:
+        maxSub = nums[0]
+        curSum =0 
+        for n in nums:
+            if curSum < 0:
+                curSum = 0 
+            curSum += n 
+            maxSub = max(maxSub, curSum)
+        return maxSub
 
-nums = list(map(int, input().split()))
-print(main(nums))
+a = Solution()
+print(a.maxSubArray(['-1,-5,-4,2,5,1']))
