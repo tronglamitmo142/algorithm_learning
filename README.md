@@ -11,4 +11,6 @@
 - cses.fi
 - Algorithm Visualization: https://visualgo.net/en 
 - Python Implementation Algorithm: https://www.tutorialspoint.com/python_data_structure/python_2darray.htm 
-  
+- Coding interview study plan: https://www.techinterviewhandbook.org/coding-interview-study-plan/
+- 75-Must do Interview question: https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions 
+- Grind 75: https://www.techinterviewhandbook.org/grind75
